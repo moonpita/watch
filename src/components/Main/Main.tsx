@@ -108,6 +108,9 @@ function Main(): JSX.Element {
                       rating={hotel.rating}
                       favorite={hotel.favorite}
                       id={hotel.id}
+                      detailImages={[]}
+                      detailProperties={[]}
+                      detailReviews={[]}
                     />
                   ))}
                 </div>

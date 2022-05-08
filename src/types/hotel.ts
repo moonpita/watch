@@ -1,4 +1,4 @@
-export type Hotel = {
+export interface Hotel {
     city: string;
     src: string;
     name: string;
@@ -8,6 +8,25 @@ export type Hotel = {
     rating: number;
     favorite: boolean;
     id: number,
+    detailImages: string[];
+    detailProperties: string[];
+    detailReviews: ReviewType[];
+}
+
+
+export type ReviewType = {
+    avatarSrc: string;
+    name: string;
+    rating: number;
+    text: string;
+    date: string;
+    reviewId: number;
 }
 
 export type HotelList = Hotel[];
+
+// export interface HotelDetail extends Hotel {
+//     detailImages: string[];
+//     detailProperties: string[];
+//     detailReviews: Review[];
+// }
