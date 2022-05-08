@@ -39,11 +39,11 @@ const hotels: HotelList = [
     src: 'www.google.com',
     name: 'Super mega ultra duper aps',
     type: 'Apartments',
-    imageSrc: 'img/apartment-03.jpg',
+    imageSrc: 'img/apartment-04.jpg',
     price: 125125,
     rating: 90,
     id: 4,
-    favorite: true,
+    favorite: false,
   },
   {
     city: 'Amsterdam',
