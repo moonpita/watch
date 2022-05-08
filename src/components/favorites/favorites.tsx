@@ -1,10 +1,13 @@
 import { Hotel } from '../../types/hotel';
 import hotels from '../../data/dataHotels';
 import FavoritesCard from './favoritesCard/favoritesCard';
+import Header from '../header/header';
+
 
 function Favorites(): JSX.Element {
   return (
     <main className="page__main page__main--favorites">
+      <Header />
       {hotels.filter((el) => el.favorite).length > 0 && (
         <div className="page__favorites-container container">
           <section className="favorites">
