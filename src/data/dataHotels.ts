@@ -2,6 +2,7 @@ import type { HotelList } from '../types/hotel';
 
 const hotels: HotelList = [
   {
+    city: 'Amsterdam',
     src: 'www.google.com',
     name: 'Super Hotel',
     type: 'Apartments',
@@ -9,8 +10,10 @@ const hotels: HotelList = [
     price: 50,
     rating: 10,
     id: 1,
+    favorite: true,
   },
   {
+    city: 'Amsterdam',
     src: 'www.google.com',
     name: 'Ultra Hotel',
     type: 'Apartments',
@@ -18,8 +21,10 @@ const hotels: HotelList = [
     price: 550,
     rating: 60,
     id: 2,
+    favorite: false,
   },
   {
+    city: 'Amsterdam',
     src: 'www.google.com',
     name: 'default hotel',
     type: 'Apartments',
@@ -27,17 +32,21 @@ const hotels: HotelList = [
     price: 1488,
     rating: 30,
     id: 3,
+    favorite: false,
   },
   {
+    city: 'Amsterdam',
     src: 'www.google.com',
     name: 'Super mega ultra duper aps',
     type: 'Apartments',
-    imageSrc: 'img/apartment-04.jpg',
+    imageSrc: 'img/apartment-03.jpg',
     price: 125125,
     rating: 90,
     id: 4,
+    favorite: true,
   },
   {
+    city: 'Amsterdam',
     src: 'www.google.com',
     name: 'Ebat house',
     type: 'House',
@@ -45,8 +54,10 @@ const hotels: HotelList = [
     price: 5120,
     rating: 80,
     id: 5,
+    favorite: false,
   },
   {
+    city: 'Amsterdam',
     src: 'www.google.com',
     name: 'Super Hotel',
     type: 'Apartments',
@@ -54,6 +65,7 @@ const hotels: HotelList = [
     price: 880,
     rating: 50,
     id: 6,
+    favorite: true,
   },
 ];
 

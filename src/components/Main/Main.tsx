@@ -96,12 +96,15 @@ function Main(): JSX.Element {
                 {hotels.map((hotel: Hotel) => (
                   <HotelCard
                     key={hotel.id}
+
+                    city={hotel.city}
                     src={hotel.src}
                     name={hotel.name}
                     type={hotel.type}
                     imageSrc={hotel.imageSrc}
                     price={hotel.price}
                     rating={hotel.rating}
+                    favorite={hotel.favorite}
                     id={hotel.id}
                   />
                 ))}
