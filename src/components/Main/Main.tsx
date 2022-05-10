@@ -1,9 +1,28 @@
-import HotelCard from '../hotelCard/hotelCard';
 import hotels from '../../data/dataHotels';
-import { Hotel } from '../../types/hotel';
 import Header from '../header/header';
 
-function Main(): JSX.Element {
+import { Point, Points, City } from '../../types/main';
+import { useState } from 'react';
+import Catalog from '../catalog/catalog';
+import Map from '../map/map';
+
+type MainProps = {
+  city: City;
+  points: Points;
+};
+
+function Main(props: MainProps): JSX.Element {
+  const { points, city } = props;
+
+  const [selectedPoint, setSelectedPoint] = useState<Point | undefined>(
+    undefined,
+  );
+
+  const onListItemHover = (listItemName: string | null) => {
+    const currentPoint = points.find((point) => point.title === listItemName);
+    setSelectedPoint(currentPoint);
+  };
+
   return (
     <div className="page page--gray page--main">
       <Header />
@@ -13,14 +32,7 @@ function Main(): JSX.Element {
           <div className="tabs">
             <section className="locations container">
               <ul className="locations__list tabs__list">
-                <li className="locations__item">
-                  <a
-                    href="www.google.com"
-                    className="locations__item-link tabs__item"
-                  >
-                    <span>Paris</span>
-                  </a>
-                </li>
+                <li className="locations__item">Paris</li>
                 <li className="locations__item">
                   <a
                     href="www.google.com"
@@ -95,29 +107,9 @@ function Main(): JSX.Element {
                     </li>
                   </ul>
                 </form>
-                <div className="cities__places-list places__list tabs__content">
-                  {hotels.map((hotel: Hotel) => (
-                    <HotelCard
-                      key={hotel.id}
-                      city={hotel.city}
-                      src={hotel.src}
-                      name={hotel.name}
-                      type={hotel.type}
-                      imageSrc={hotel.imageSrc}
-                      price={hotel.price}
-                      rating={hotel.rating}
-                      favorite={hotel.favorite}
-                      id={hotel.id}
-                      detailImages={[]}
-                      detailProperties={[]}
-                      detailReviews={[]}
-                    />
-                  ))}
-                </div>
+                <Catalog hotels={hotels} onListItemHover={onListItemHover} />
               </section>
-              <div className="cities__right-section">
-                <section className="cities__map map"></section>
-              </div>
+              <Map city={city} points={points} selectedPoint={selectedPoint}/>
             </div>
           </div>
         </main>
@@ -129,27 +121,42 @@ function Main(): JSX.Element {
             <section className="locations container">
               <ul className="locations__list tabs__list">
                 <li className="locations__item">
-                  <a className="locations__item-link tabs__item" href="www.google.com">
+                  <a
+                    className="locations__item-link tabs__item"
+                    href="www.google.com"
+                  >
                     <span>Paris</span>
                   </a>
                 </li>
                 <li className="locations__item">
-                  <a className="locations__item-link tabs__item" href="www.google.com">
+                  <a
+                    className="locations__item-link tabs__item"
+                    href="www.google.com"
+                  >
                     <span>Cologne</span>
                   </a>
                 </li>
                 <li className="locations__item">
-                  <a className="locations__item-link tabs__item" href="www.google.com">
+                  <a
+                    className="locations__item-link tabs__item"
+                    href="www.google.com"
+                  >
                     <span>Brussels</span>
                   </a>
                 </li>
                 <li className="locations__item">
-                  <a href="www.google.com" className="locations__item-link tabs__item">
+                  <a
+                    href="www.google.com"
+                    className="locations__item-link tabs__item"
+                  >
                     <span>Amsterdam</span>
                   </a>
                 </li>
                 <li className="locations__item">
-                  <a className="locations__item-link tabs__item" href="www.google.com">
+                  <a
+                    className="locations__item-link tabs__item"
+                    href="www.google.com"
+                  >
                     <span>Hamburg</span>
                   </a>
                 </li>
