@@ -6,7 +6,6 @@ import Favorites from '../favorites/favorites';
 import Login from '../login/login';
 import PrivateRoute from '../privateRoute/privateRoute';
 import { POINTS } from '../../data/points';
-import { CITY } from '../../data/city';
 
 const curId = 55;
 function App(): JSX.Element {
@@ -15,7 +14,7 @@ function App(): JSX.Element {
       <Routes>
         <Route
           path={AppRoute.Root}
-          element={<Main points={POINTS} city={CITY} />}
+          element={<Main points={POINTS}  />}
         />
         <Route path={AppRoute.Login} element={<Login />} />
         <Route

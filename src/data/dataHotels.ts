@@ -218,9 +218,9 @@ const hotels: HotelList = [
     ],
   },
   {
-    city: 'Amsterdam',
+    city: 'Hamburg',
     src: 'www.google.com',
-    name: 'Ebat house',
+    name: 'Wow house',
     type: 'House',
     imageSrc: 'img/apartment-05.jpg',
     price: 5120,
@@ -272,7 +272,7 @@ const hotels: HotelList = [
     ],
   },
   {
-    city: 'Amsterdam',
+    city: 'Paris',
     src: 'www.google.com',
     name: 'Super Hotel',
     type: 'Apartments',

@@ -17,8 +17,8 @@ export const POINTS: Points = [
     lng: -73.879357,
   },
   {
-    title: 'Ebat house',
-    lat: 40.870817,
+    title: 'Wow house',
+    lat: 20.870817,
     lng: -73.927112,
   },
 ];

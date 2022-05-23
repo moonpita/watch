@@ -12,3 +12,4 @@ export type Point = {
 };
 
 export type Points = Point[];
+export type Cities = City[];
